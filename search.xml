@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>protobuf入门</title>
+      <link href="/2022/04/11/protobuf%E5%85%A5%E9%97%A8/"/>
+      <url>/2022/04/11/protobuf%E5%85%A5%E9%97%A8/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="搭建go-micro开发环境"><a href="#搭建go-micro开发环境" class="headerlink" title="搭建go-micro开发环境"></a>搭建go-micro开发环境</h1><h2 id="1、安装"><a href="#1、安装" class="headerlink" title="1、安装"></a>1、安装</h2><blockquote><h4 id="Protocol-Buffers-v3"><a href="#Protocol-Buffers-v3" class="headerlink" title="Protocol Buffers v3"></a>Protocol Buffers v3</h4></blockquote><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/google/protobuf/releases/download/v3.5.1/protobuf-all-3.5.1.zip</span><br><span class="line">unzip protobuf-all-3.5.1.zip</span><br><span class="line">cd protobuf-3.5.1/</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure><p>检查是否安装成功</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">protoc --version</span><br></pre></td></tr></table></figure><p><strong>Protoc Plugin</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">go get -u github.com/golang/protobuf/protoc-gen-go</span><br><span class="line"></span><br><span class="line">// 若使用了micro框架，则需要多一种插件 </span><br><span class="line">go get  github.com/micro/protoc-gen-micro</span><br></pre></td></tr></table></figure><blockquote><h4 id="go-micro-v2"><a href="#go-micro-v2" class="headerlink" title="go-micro v2"></a>go-micro v2</h4></blockquote><p>安装go-micro</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go get github.com/micro/go-micro/v2</span><br></pre></td></tr></table></figure><p>安装工具集</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go get github.com/micro/micro/v2</span><br></pre></td></tr></table></figure><p>安装protobuf插件(与上面有重复)</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">go get  github.com/golang/protobuf/&#123;proto,protoc-gen-go&#125;</span><br><span class="line">go get  github.com/micro/protoc-gen-micro</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> go </tag>
+            
+            <tag> protobuf v3 </tag>
+            
+            <tag> go-micro v2 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2022/04/11/hello-world/"/>
       <url>/2022/04/11/hello-world/</url>
